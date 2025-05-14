@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>WeHelp.id - Jasa Joki Profesional & Solusi Tugas Kuliah</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;600&display=swap');
+
+  /* Reset & base */
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    color: #f5f3f1;
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a {
+    color: #ffdd00; /* bright yellow */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover, a:focus {
+    color: #fff72c;
+    text-decoration: underline;
+    outline: none;
+  }
+
+  header {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 3rem 1rem 3.5rem 1rem;
+    text-align: center;
+    border-bottom: 4px solid #ffdd00;
+    box-shadow: 0 5px 20px #ffdd00cc;
+  }
+
+  header h1 {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: #ffdd00;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    text-shadow:
+      0 0 12px #ffdd00,
+      0 0 30px #ffdd00,
+      0 0 45px #ffe733;
+  }
+
+  header p {
+    margin-top: 0.7rem;
+    font-weight: 300;
+    font-size: 1.6rem;
+    color: #f5f3f1cc;
+    font-style: italic;
+    letter-spacing: 4px;
+    text-shadow: 1px 1px 4px #000;
+  }
+
+  main {
+    max-width: 900px;
+    margin: 5rem auto 8rem auto;
+    padding: 0 1.25rem;
+  }
+
+  section.intro {
+    text-align: center;
+    margin-bottom: 5rem;
+    padding: 0 1rem;
+  }
+
+  section.intro h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.8rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    color: #fff200;
+    text-shadow:
+      1px 1px 10px #ffdd00cc,
+      0 0 30px #fff200bb;
+    line-height: 1.1;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  section.intro p {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #ddd;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.85;
+    letter-spacing: 0.06em;
+    font-style: normal;
+    text-shadow: 0 0 6px #000000aa;
+  }
+
+  .btn-primary {
+    margin-top: 3rem;
+    padding: 1.15rem 4rem;
+    background-color: #ffdd00;
+    color: #121212;
+    font-weight: 700;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 60px;
+    cursor: pointer;
+    transition: background-color 0.35s ease, box-shadow 0.35s ease;
+    box-shadow:
+      0 0 12px #ffdd00cc,
+      0 0 25px #ffe700bb;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    user-select: none;
+  }
+
+  .btn-primary:hover, .btn-primary:focus {
+    background-color: #fff500;
+    box-shadow:
+      0 0 22px #fff500dd,
+      0 0 40px #fff500cc;
+    outline: none;
+  }
+
+  section.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2.8rem;
+  }
+
+  .feature-card {
+    background: linear-gradient(145deg, #1a1a1a, #141414);
+    border: 2px solid #222;
+    border-radius: 22px;
+    padding: 2.5rem 3rem;
+    flex: 1 1 300px;
+    box-shadow:
+      inset 0 0 10px #111,
+      0 0 20px #000;
+    text-align: center;
+    color: #eee;
+    font-smooth: always;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+    cursor: default;
+  }
+
+  .feature-card:hover,
+  .feature-card:focus-within {
+    border-color: #ffdd00;
+    background: linear-gradient(145deg, #232323, #1a1a00);
+    box-shadow:
+      0 0 35px #ffdd00dd,
+      inset 0 0 20px #ffdd00aa;
+    outline: none;
+  }
+
+  .feature-card h3 {
+    color: #ffdd00;
+    margin-bottom: 1.25rem;
+    font-weight: 900;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.65rem;
+    text-shadow:
+      0 0 8px #ffdd0099,
+      0 0 18px #fff518aa;
+  }
+
+  .feature-card p {
+    color: #ddd;
+    font-weight: 400;
+    font-size: 1.075rem;
+    line-height: 1.6;
+    letter-spacing: 0.035em;
+  }
+
+  section.contact {
+    margin-top: 6.5rem;
+    background: #111;
+    border-radius: 24px;
+    padding: 3rem 2.5rem;
+    box-shadow: 0 0 38px #ffdd00cc;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-weight: 400;
+  }
+
+  section.contact h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #ffdd00;
+    margin-bottom: 1.75rem;
+    text-shadow: 0 0 12px #ffdd00cc;
+    letter-spacing: 0.12em;
+  }
+
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1.15rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ffdd00;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    user-select: text;
+  }
+
+  .contact-item:hover,
+  .contact-item:focus {
+    color: #fff72c;
+    outline: none;
+  }
+
+  /* Inline SVG icon style */
+  .contact-icon {
+    width: 36px;
+    height: 36px;
+    fill: currentColor;
+    filter: drop-shadow(0 0 2px #ffdd00bb);
+    flex-shrink: 0;
+  }
+
+  footer {
+    margin-top: 10rem;
+    padding: 1.8rem 1rem;
+    background: #111;
+    text-align: center;
+    font-weight: 300;
+    font-size: 1rem;
+    color: #aaa;
+    border-top: 4px solid #ffdd00;
+    letter-spacing: 0.06em;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  @media (max-width: 700px) {
+    section.features {
+      flex-direction: column;
+      gap: 3rem;
+    }
+    .contact-links {
+      flex-direction: column;
+      gap: 2.8rem;
+    }
+    .btn-primary {
+      width: 90%;
+      max-width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1.25rem;
+      letter-spacing: 0.1em;
+    }
+    header h1 {
+      font-size: 3.5rem;
+      letter-spacing: 5px;
+    }
+    section.intro h2 {
+      font-size: 2.6rem;
+      letter-spacing: 0.1em;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>WeHelp.id</h1>
+  <p>Mitra Joki Profesional & Solusi Tugas Kuliah Andal</p>
+</header>
+<main>
+  <section class="intro">
+    <h2>Lebih Dari 5 Tahun Menghadirkan Keajaiban Untuk Anda</h2>
+    <p>
+      Dengan pengalaman hampir lima tahun, <strong>WeHelp.id</strong> adalah pilihan terpercaya dan terkemuka di bidang jasa joki dan solusi akademik.
+      Kami menawarkan harga yang sangat terjangkau tanpa mengorbankan mutu layanan yang bisa disandingkan dengan yang terbaik di kelasnya.
+      <br /><br />
+      <em>Solusi Tepat | Hemat | Cepat</em> – itulah janji kami untuk Anda yang ingin meraih hasil maksimal dengan efisiensi waktu dan biaya.
+    </p>
+    <button class="btn-primary" onclick="alert('Terima kasih telah menghubungi WeHelp.id!')">
+      Pesan Sekarang
+    </button>
+  </section>
+
+  <section class="features">
+    <div class="feature-card" tabindex="0" aria-label="Keamanan terpercaya">
+      <h3>Aman dan Terpercaya</h3>
+      <p>Kami menjaga keamanan akun Anda dengan ketat dan berkomitmen penuh pada pelayanan terbaik yang terpercaya dan profesional.</p>
+    </div>
+    <div class="feature-card" tabindex="0" aria-label="Joki profesional berpengalaman">
+      <h3>Joki Profesional</h3>
+      <p>Tim ahli kami memiliki pengalaman luas dalam berbagai jenis game, siap membantu mencapai target kemenangan Anda secara aman.</p>
+    </div>
+    <div class="feature-card" tabindex="0" aria-label="Layanan tugas akademik lengkap">
+      <h3>Solusi Tugas Kuliah Lengkap</h3>
+      <p>Kami menyelesaikan segala bentuk tugas kuliah, skripsi, jurnal, dan karya ilmiah lainnya dengan pengerjaan detail dan berkualitas tinggi.</p>
+    </div>
+    <div class="feature-card" tabindex="0" aria-label="Spesialis hukum handal">
+      <h3>Spesialis Hukum</h3>
+      <p>Tenaga ahli dengan spesialisasi hukum siap memberikan layanan akademik maupun konsultasi di bidang hukum secara profesional.</p>
+    </div>
+    <div class="feature-card" tabindex="0" aria-label="Harga terjangkau dan pelayanan cepat">
+      <h3>Harga Terjangkau & Pelayanan Cepat</h3>
+      <p>Paket layanan kami dengan harga bersaing dikombinasikan dengan proses cepat dan respons yang tidak membuat Anda menunggu lama.</p>
+    </div>
+  </section>
+
+  <section class="contact" aria-label="Kontak WeHelp.id">
+    <h2>Hubungi Kami</h2>
+    <div class="contact-links">
+      <a class="contact-item" href="https://wa.me/62881027097565" target="_blank" rel="noopener" aria-label="Kontak WhatsApp WeHelp.id">
+        <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M20.52 3.478a11.827 11.827 0 00-16.741 0 11.671 11.671 0 00-3.484 8.25c0 2.25.63 4.497 1.845 6.429L2.472 21.41l4.059-1.344a11.59 11.59 0 006.16 1.669h.004c6.52 0 11.8-5.283 11.8-11.8 0-3.16-1.28-6.13-3.38-8.466zm-8.282 15.28a8.202 8.202 0 01-4.3-1.252l-.308-.182-2.4.793.807-2.342-.2-.382a7.963 7.963 0 01-1.243-4.3c0-4.41 3.58-7.99 7.99-7.99a7.963 7.963 0 017.987 7.99c0 4.41-3.578 7.99-7.983 7.99zm4.329-5.972c-.236-.118-1.402-.691-1.62-.77-.217-.077-.375-.118-.533.118-.158.236-.61.77-.75.928-.138.157-.276.177-.512.059-.236-.118-1.002-.369-1.91-1.18-.707-.63-1.184-1.41-1.323-1.646-.14-.236-.016-.362.103-.48.106-.105.236-.274.354-.412.118-.139.157-.236.236-.395.078-.157.039-.295-.02-.414-.059-.118-.533-1.281-.73-1.76-.192-.46-.387-.398-.533-.405l-.453-.008c-.157 0-.412.059-.627.295s-.823.804-.823 1.958.843 2.278.961 2.436c.118.157 1.657 2.528 4.011 3.544.56.242 1 .385 1.342.493.564.178 1.078.153 1.485.093.453-.07 1.402-.572 1.6-1.126.197-.557.197-1.035.138-1.126-.059-.087-.217-.139-.452-.258z"/>
+        </svg>
+        +62 0881-0279-77565
+      </a>
+      <a class="contact-item" href="https://www.instagram.com/joki_wehelp.id?igsh=MWZ0bGgwZDhzeHM5Yw==" target="_blank" rel="noopener" aria-label="Instagram WeHelp.id">
+        <svg class="contact-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M7.75 2A5.754 5.754 0 002 7.75v8.504A5.754 5.754 0 007.75 22h8.504A5.754 5.754 0 0022 16.254V7.75A5.754 5.754 0 0016.254 2H7.75zm0 2h8.504c1.525 0 2.75 1.224 2.75 2.75v8.505c0 1.526-1.225 2.75-2.75 2.75H7.75A2.752 2.752 0 015 16.254V7.75c0-1.526 1.225-2.75 2.75-2.75zm4.248 3a4.002 4.002 0 11.001 8.005 4.002 4.002 0 01-.001-8.005zm0 2a2 2 0 100 4 2 2 0 000-4zm3.21-.75a.937.937 0 11-1.874 0 .937.937 0 011.874 0z"/>
+        </svg>
+        @joki_wehelp.id
+      </a>
+    </div>
+  </section>
+</main>
+<footer>
+  &copy; 2024 WeHelp.id - Semua Hak Dilindungi
+</footer>
+</body>
+</html>
+
